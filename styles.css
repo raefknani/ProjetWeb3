@@ -26,9 +26,8 @@ body {
   border-radius: 7px;
   font-size: 16px;
   font-weight: 900;
-  
 }
-
+/* mode pc */
 .logo_container {
   margin: 10px;
   display: flex;
@@ -86,7 +85,7 @@ ul {
   border-radius: 15px;
   color: white;
 }
-
+/* mode pc */
 .nav_group {
   display: flex;
   gap: 50px;
@@ -96,6 +95,7 @@ ul {
 
 .navbar img {
   width: 30px;
+  display: none;
 }
 
 .menue_after {
@@ -143,4 +143,65 @@ ul {
 
 .menue_after li:hover {
   background: #0aadbc15;
+}
+
+/* Slightly smaller desktop: hide text next to logo */
+@media (max-width: 1220px) and (min-width: 901px) {
+  .logoContent {
+    display: none;
+  }
+}
+
+/* Responsive visibility rules */
+@media (min-width: 901px) {
+  /* Desktop: show logo + nav links, hide burger/menu */
+  .logo_container {
+    display: flex;
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .nav_group {
+    display: flex;
+  }
+  .menu_burger img {
+    display: none;
+  }
+  .menue_after {
+    display: none;
+  }
+  .menue_after.is-open {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Mobile/tablet: show burger and reserve button; hide inline nav, optionally hide big logo */
+  .logo_container {
+    display: none;
+  }
+  .nav_group {
+    display: none;
+  }
+  .menu_burger img {
+    display: block;
+  }
+  .menue_after {
+    width: 240px;
+    max-width: 320px;
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    transform: none;
+    z-index: 1000;
+  }
+  .menue_after.is-open {
+    display: flex;
+  }
+  .nav_selection {
+    gap: 24px;
+  }
+  #btn_reserver {
+    display: inline-flex;
+    padding: 10px 14px;
+  }
 }
