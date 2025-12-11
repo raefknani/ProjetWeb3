@@ -71,7 +71,21 @@
         if (burger) {
             burger.addEventListener('click', toggleMenu);
         }
-        
+
+        // Switch button label on mobile/tablet
+        const reserveBtn = document.querySelector('#btn_reserver');
+        const compactQuery = window.matchMedia('(max-width: 1100px)'); // Surface Pro-ish widths and below
+
+        function updateReserveLabel(e) {
+            if (!reserveBtn) return;
+            reserveBtn.textContent = e.matches ? 'Réserver…' : 'Réservez maintenant';
+        }
+
+        if (reserveBtn) {
+            updateReserveLabel(compactQuery);
+            compactQuery.addEventListener('change', updateReserveLabel);
+        }
+
     </script>
 
 </body>

@@ -150,6 +150,9 @@ ul {
   .logoContent {
     display: none;
   }
+  .nav_group {
+    gap: 30px;
+  }
 }
 
 /* Responsive visibility rules */
@@ -177,13 +180,24 @@ ul {
 @media (max-width: 900px) {
   /* Mobile/tablet: show burger and reserve button; hide inline nav, optionally hide big logo */
   .logo_container {
-    display: none;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    gap: 8px;
   }
   .nav_group {
     display: none;
   }
   .menu_burger img {
     display: block;
+  }
+  .LG_logo {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .logoContent p {
+    font-size: 13px;
+    line-height: 1.2;
   }
   .menue_after {
     width: 240px;
@@ -202,6 +216,14 @@ ul {
   }
   #btn_reserver {
     display: inline-flex;
-    padding: 10px 14px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Ultra-small: hide Decouvrir text only below ~iPad mini */
+@media (max-width: 767px) {
+  #Decouvrir {
+    display: none;
   }
 }
