@@ -59,6 +59,45 @@
             <li>Contact</li>
         </ul>
     </div>
+
+    <div class="carousel-wrapper">
+        <h1>Découvrez vos destinations de rêve</h1>
+        <p class="subtitle">
+            Trouve des voyages adaptés : famille, aventure, romance — à prix compétitifs.
+        </p>
+
+        <div class="carousel">
+            <input type="radio" name="slides" id="slide1" checked>
+            <input type="radio" name="slides" id="slide2">
+            <input type="radio" name="slides" id="slide3">
+
+            <div class="slides">
+                <div class="slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80">
+                    <div class="caption">Escapades urbaines</div>
+                </div>
+                <div class="slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80">
+                    <div class="caption">Aventures en nature</div>
+                </div>
+                <div class="slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80">
+                    <div class="caption">Voyages romantiques</div>
+                </div>
+            </div>
+
+            <!-- Navigation dots -->
+            <div class="navigation">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+            </div>
+        </div>
+    </div>
+
     <script>
         const burger = document.querySelector('.menu_burger');
         const menu = document.querySelector('.menue_after');
@@ -74,16 +113,16 @@
 
         // Switch button label on mobile/tablet
         const reserveBtn = document.querySelector('#btn_reserver');
-        const mobileQuery = window.matchMedia('(max-width: 900px)');
+        const compactQuery = window.matchMedia('(max-width: 1100px)'); // Surface Pro-ish widths and below
 
         function updateReserveLabel(e) {
             if (!reserveBtn) return;
-            reserveBtn.textContent = e.matches ? 'Réserver...' : 'Réservez maintenant';
+            reserveBtn.textContent = e.matches ? 'Réserver…' : 'Réservez maintenant';
         }
 
         if (reserveBtn) {
-            updateReserveLabel(mobileQuery);
-            mobileQuery.addEventListener('change', updateReserveLabel);
+            updateReserveLabel(compactQuery);
+            compactQuery.addEventListener('change', updateReserveLabel);
         }
 
     </script>
