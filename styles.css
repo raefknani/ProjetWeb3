@@ -15,6 +15,9 @@ body {
   padding: 10px 20px;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .LG_logo {
@@ -338,11 +341,13 @@ ul {
 
 .carrosel_and_search_wrapper {
   display: grid;
-  /* grid-template-columns: 2fr 1fr;
-  gap: 20px; */
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
   align-items: start;
   justify-items: stretch;
 }
+
+
 
 /* .test {
   background: red;
