@@ -338,8 +338,8 @@ ul {
 
 .carrosel_and_search_wrapper {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
+  /* grid-template-columns: 2fr 1fr;
+  gap: 20px; */
   align-items: start;
   justify-items: stretch;
 }
@@ -350,3 +350,8 @@ ul {
   height: fit-content;
   padding: 5px;
 } */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
