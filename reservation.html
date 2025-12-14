@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./reservation.css">
     <title>Reservation</title>
 </head>
 
@@ -41,7 +42,7 @@
                     <li><a href="./a_propos.html">À propos</a></li>
                     <li><a href="./Contact.html">Contact</a></li>
                 </span>
-                <li id="btn_reserver">Réservez maintenant</li>
+                <li id="btn_reserver"><a href="./reservation.html">Réservez maintenant</a></li>
             </ul>
 
         </div>
@@ -56,6 +57,70 @@
             <li><a href="./a_propos.html">À propos</a></li>
             <li><a href="./Contact.html">Contact</a></li>
         </ul>
+    </div>
+
+    <div class="reservation-wrapper">
+        <h1>Réservez votre voyage</h1>
+        <p class="reservation-intro">Complétez le formulaire pour réserver votre destination</p>
+
+        <form class="reservation-form" id="reservationForm">
+            <div class="form-group">
+                <label for="name">Nom complet *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Téléphone *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="destination">Destination *</label>
+                <select id="destination" name="destination" required>
+                    <option value="">-- Sélectionnez une destination --</option>
+                    <option value="paris">Paris, France</option>
+                    <option value="tokyo">Tokyo, Japon</option>
+                    <option value="sydney">Sydney, Australie</option>
+                    <option value="bali">Bali, Indonésie</option>
+                    <option value="newyork">New York, USA</option>
+                    <option value="dubai">Dubaï, Émirats Arabes Unis</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="checkIn">Date d'arrivée *</label>
+                <input type="date" id="checkIn" name="checkIn" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkOut">Date de départ *</label>
+                <input type="date" id="checkOut" name="checkOut" required>
+            </div>
+
+            <div class="form-group">
+                <label for="travelers">Nombre de voyageurs *</label>
+                <select id="travelers" name="travelers" required>
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="1">1 personne</option>
+                    <option value="2">2 personnes</option>
+                    <option value="3">3 personnes</option>
+                    <option value="4">4 personnes</option>
+                    <option value="5">5+ personnes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message (optionnel)</label>
+                <textarea id="message" name="message" rows="4" placeholder="Demandes spéciales..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Réserver</button>
+        </form>
     </div>
 </body>
 <script src="./script.js"></script>
