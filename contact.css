@@ -2,7 +2,6 @@
   background: rgba(255, 255, 255, 0.927);
 }
 
-/* Contact Page Styles */
 .contact-wrapper {
   max-width: 1000px;
   margin: 40px auto;
@@ -28,7 +27,6 @@
   gap: 40px;
 }
 
-/* Contact Form Styles */
 .contact-form {
   background: white;
   padding: 30px;
@@ -85,7 +83,6 @@
   opacity: 0.8;
 }
 
-/* Contact Info Styles */
 .contact-info {
   background: #f8fbfd;
   padding: 30px;

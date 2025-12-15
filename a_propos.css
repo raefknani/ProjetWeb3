@@ -2,7 +2,6 @@
   background: rgba(255, 255, 255, 0.927);
 }
 
-/* About Page Styles */
 .about-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -56,7 +55,6 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Mission Section */
 .mission-section {
   text-align: center;
   background: #f8fbfd;
@@ -79,7 +77,6 @@
   line-height: 1.8;
 }
 
-/* Values Section */
 .values-section {
   margin-bottom: 60px;
 }
@@ -128,7 +125,6 @@
   line-height: 1.6;
 }
 
-/* Stats Section */
 .stats-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -151,7 +147,6 @@
   opacity: 0.9;
 }
 
-/* Team Section */
 .team-section {
   margin-bottom: 60px;
 }
@@ -206,7 +201,6 @@
   font-weight: 600;
 }
 
-/* CTA Section */
 .about-cta {
   text-align: center;
   background: linear-gradient(135deg, #0aadbc 0%, #06788a 100%);
