@@ -62,42 +62,162 @@
         </ul>
     </div>
 
-    <div class="carrosel_and_search_wrapper">
-        <div class="carousel-wrapper">
-            <h1>Découvrez vos destinations de rêve</h1>
-            <p class="subtitle">
-                Trouve des voyages adaptés : famille, aventure, romance — à prix compétitifs.
-            </p>
-            <div class="carousel">
-                <input type="radio" name="slides" id="slide1" checked>
-                <input type="radio" name="slides" id="slide2">
-                <input type="radio" name="slides" id="slide3">
-                <div class="slides">
-                    <div class="slide">
-                        <img
-                            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80">
-                        <div class="caption">Escapades urbaines</div>
+    <div class="searchAndCarousel">
+        <div class="carrosel_and_search_wrapper">
+            <div class="carousel-wrapper">
+                <h1>Découvrez vos destinations de rêve</h1>
+                <p class="subtitle">
+                    Trouve des voyages adaptés : famille, aventure, romance — à prix compétitifs.
+                </p>
+                <div class="carousel">
+                    <input type="radio" name="slides" id="slide1" checked>
+                    <input type="radio" name="slides" id="slide2">
+                    <input type="radio" name="slides" id="slide3">
+                    <div class="slides">
+                        <div class="slide">
+                            <img
+                                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80">
+                            <div class="caption">Escapades urbaines</div>
+                        </div>
+                        <div class="slide">
+                            <img
+                                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80">
+                            <div class="caption">Aventures en nature</div>
+                        </div>
+                        <div class="slide">
+                            <img
+                                src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80">
+                            <div class="caption">Voyages romantiques</div>
+                        </div>
                     </div>
-                    <div class="slide">
-                        <img
-                            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80">
-                        <div class="caption">Aventures en nature</div>
+                    <!-- Navigation dots -->
+                    <div class="navigation">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
                     </div>
-                    <div class="slide">
-                        <img
-                            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80">
-                        <div class="caption">Voyages romantiques</div>
-                    </div>
-                </div>
-                <!-- Navigation dots -->
-                <div class="navigation">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
                 </div>
             </div>
         </div>
+        <aside class="search-panel">
+            <h2>Recherche rapide</h2>
+            <div class="form-group">
+                <label for="searchDestination">Destination</label>
+                <input type="text" id="searchDestination" placeholder="Rechercher une destination…">
+            </div>
+            <div class="form-group">
+                <label for="typeSelect">Type de destination</label>
+                <select id="typeSelect">
+                    <option value="all">Tous</option>
+                    <option value="ville">Ville</option>
+                    <option value="nature">Nature</option>
+                    <option value="plage">Plage</option>
+                    <option value="culture">Culture</option>
+                    <option value="luxe">Luxe</option>
+                </select>
+            </div>
+            <div class="deal-box">
+                <div class="deal-badge">Remise</div>
+                <p><strong>Offre du jour:</strong> -15% sur Bali</p>
+                <p class="deal-small">Valable jusqu'à minuit • Conditions s'appliquent</p>
+            </div>
+            <a href="./destination.html" class="card-btn" style="margin-top: 10px; display: inline-block;">Voir
+                toutes
+                les destinations</a>
+        </aside>
     </div>
+
+    <!-- Popular Destinations with Filter -->
+    <section class="popular-destinations">
+        <h2>Nos destinations populaires</h2>
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="ville">Villes</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="plage">Plages</button>
+            <button class="filter-btn" data-filter="culture">Culture</button>
+            <button class="filter-btn" data-filter="luxe">Luxe</button>
+        </div>
+        <div class="popular-grid destinations-grid">
+            <div class="destination-card" data-category="ville">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=400&q=80"
+                    alt="Paris">
+                <div class="card-content">
+                    <h3>Paris, France</h3>
+                    <p class="description">Musées, cafés et romance — la ville lumière.</p>
+                    <div class="card-footer">
+                        <span class="price">À partir de <strong>€899</strong></span>
+                        <a href="./reservation.html" class="card-btn">Réserver</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-card" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80"
+                    alt="Sydney">
+                <div class="card-content">
+                    <h3>Sydney, Australie</h3>
+                    <p class="description">Plages et paysages — idéale pour les explorateurs.</p>
+                    <div class="card-footer">
+                        <span class="price">À partir de <strong>€1,199</strong></span>
+                        <a href="./reservation.html" class="card-btn">Réserver</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-card" data-category="plage">
+                <img src="https://images.unsplash.com/photo-1551632440-35cd9f92e0a0?auto=format&fit=crop&w=400&q=80"
+                    alt="Bali">
+                <div class="card-content">
+                    <h3>Bali, Indonésie</h3>
+                    <p class="description">Plages, temples et détente — paradis tropical.</p>
+                    <div class="card-footer">
+                        <span class="price">À partir de <strong>€599</strong></span>
+                        <a href="./reservation.html" class="card-btn">Réserver</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-card" data-category="culture">
+                <img src="https://images.unsplash.com/photo-1540959375944-7049f642e9a9?auto=format&fit=crop&w=400&q=80"
+                    alt="Tokyo">
+                <div class="card-content">
+                    <h3>Tokyo, Japon</h3>
+                    <p class="description">Tradition et modernité — culture unique.</p>
+                    <div class="card-footer">
+                        <span class="price">À partir de <strong>€1,299</strong></span>
+                        <a href="./reservation.html" class="card-btn">Réserver</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-card" data-category="ville">
+                <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=400&q=80"
+                    alt="New York">
+                <div class="card-content">
+                    <h3>New York, USA</h3>
+                    <p class="description">Skylines et spectacles — la ville qui ne dort jamais.</p>
+                    <div class="card-footer">
+                        <span class="price">À partir de <strong>€949</strong></span>
+                        <a href="./reservation.html" class="card-btn">Réserver</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-card" data-category="luxe">
+                <img src="https://images.unsplash.com/photo-1512453775177-45bc9734b071?auto=format&fit=crop&w=400&q=80"
+                    alt="Dubai">
+                <div class="card-content">
+                    <h3>Dubaï, E.A.U.</h3>
+                    <p class="description">Luxe, shopping et architecture futuriste.</p>
+                    <div class="card-footer">
+                        <span class="price">À partir de <strong>€1,099</strong></span>
+                        <a href="./reservation.html" class="card-btn">Réserver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="footer-content">

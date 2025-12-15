@@ -234,7 +234,7 @@ ul {
 /* begin carousel */
 .carousel-wrapper {
   max-width: 900px;
-  margin: 30px auto;
+  margin: 0;
   padding: 25px;
   background: #f8fbfd;
   border-radius: 20px;
@@ -339,12 +339,18 @@ ul {
 
 /* end carousel */
 
-.carrosel_and_search_wrapper {
+.searchAndCarousel {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
   align-items: start;
   justify-items: stretch;
+  /* background: red; */
+  padding: 30px;
+}
+
+.carrosel_and_search_wrapper {
+  display: block;
 }
 
 /* .test {
@@ -357,6 +363,177 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Quick Search Panel */
+.search-panel {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: fit-content;
+  align-self: start;
+}
+
+.search-panel h2 {
+  font-size: 20px;
+  color: #0aadbc;
+  margin-bottom: 15px;
+}
+
+.deal-box {
+  background: #f8fbfd;
+  border: 1px solid #e6f3f6;
+  border-left: 4px solid #0aadbc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.deal-badge {
+  display: inline-block;
+  background: #0aadbc;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.deal-small {
+  color: #666;
+  font-size: 12px;
+}
+
+/* Popular Destinations */
+.popular-destinations {
+  max-width: 1200px;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+}
+
+.popular-destinations h2 {
+  text-align: center;
+  color: #0aadbc;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0 25px;
+}
+
+.filter-btn {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.filter-btn:hover {
+  border-color: #0aadbc;
+  color: #06788a;
+}
+
+.filter-btn.active {
+  background: #0aadbc;
+  color: white;
+  border-color: #0aadbc;
+}
+
+@media (max-width: 900px) {
+  .searchAndCarousel {
+    grid-template-columns: 1fr;
+  }
+
+  .search-panel {
+    order: -1;
+  }
+}
+
+/* Destination Cards (shared) */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.destination-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-content h3 {
+  color: #333;
+  font-size: 18px;
+}
+
+.description {
+  color: #666;
+  font-size: 14px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.price {
+  color: #666;
+  font-size: 14px;
+}
+
+.price strong {
+  color: #0aadbc;
+  font-size: 18px;
+}
+
+.card-btn {
+  background: linear-gradient(135deg, #0aadbc 0%, #06788a 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.card-btn:hover {
+  opacity: 0.9;
 }
 
 /* Reservation Page */

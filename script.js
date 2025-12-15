@@ -71,3 +71,35 @@ slidesContainer?.addEventListener("mousemove", (e) => {
 });
 
 slidesContainer && (slidesContainer.style.cursor = "grab");
+
+// Popular destinations filter (home page)
+const filterButtons = document.querySelectorAll(".filter-btn");
+const popularCards = document.querySelectorAll(
+  ".popular-grid .destination-card"
+);
+const quickSearchInput = document.querySelector("#searchDestination");
+const quickTypeSelect = document.querySelector("#typeSelect");
+
+function applyFilters() {
+  const text = (quickSearchInput?.value || "").toLowerCase().trim();
+  const type = quickTypeSelect?.value || "all";
+  popularCards.forEach((card) => {
+    const title = card.querySelector("h3")?.textContent.toLowerCase() || "";
+    const cat = card.dataset.category || "all";
+    const matchText = text === "" || title.includes(text);
+    const matchType = type === "all" || cat === type;
+    card.style.display = matchText && matchType ? "" : "none";
+  });
+}
+
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    if (quickTypeSelect) quickTypeSelect.value = btn.dataset.filter || "all";
+    applyFilters();
+  });
+});
+
+quickSearchInput?.addEventListener("input", applyFilters);
+quickTypeSelect?.addEventListener("change", applyFilters);
