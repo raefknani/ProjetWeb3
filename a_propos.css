@@ -148,7 +148,7 @@
 }
 
 .team-section {
-  margin-bottom: 60px;
+  margin: 0;
 }
 
 .team-section h2 {
@@ -170,7 +170,7 @@
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2fr, 1fr);
   gap: 30px;
 }
 
@@ -207,7 +207,7 @@
   color: white;
   padding: 60px 40px;
   border-radius: 10px;
-  margin-bottom: 40px;
+  margin: 0;
 }
 
 .about-cta h2 {
@@ -219,6 +219,28 @@
   font-size: 18px;
   margin-bottom: 30px;
   opacity: 0.95;
+}
+
+/* Team + CTA grid */
+.team-cta-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+  margin-bottom: 60px;
+}
+
+.team-cta-grid .about-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .team-cta-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cta-button {
